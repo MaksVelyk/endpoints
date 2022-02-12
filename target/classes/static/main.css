@@ -1,0 +1,42 @@
+.cookware {
+    border: 2px solid blue;
+    margin: 10px;
+    width: 800px;
+    padding: 10px;
+}
+
+.cookware .title {
+    color: blue;
+    font-family: "Arial";
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.cookware .manufacturer {
+    color: deepskyblue;
+    font-size: 20px;
+}
+
+.cookware .price {
+    color: deepskyblue;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.cookware .article_number {
+    color: deepskyblue;
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.cookware .quantity {
+    color: deepskyblue;
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.cookware div {
+    margin: 10px;
+}

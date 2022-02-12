@@ -1,0 +1,44 @@
+#logo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    filter: blur(10px);
+}
+
+#content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#menu a {
+    margin: 5px 15px;
+    text-decoration: none;
+    color: blue;
+    transition: color 0.5s;
+    transition: background 0.5s;
+    padding: 5px 15px;
+    font-size: 25px;
+    border-radius: 15px;
+}
+
+#menu a:hover {
+    color: white;
+    background: blueviolet;
+}
+
+.centered {
+    color: deepskyblue;
+    font-size: 25px;
+    position: absolute;
+    top: 25%;
+    left: 50.5%;
+    transform: translate(-50%, -50%);
+}
