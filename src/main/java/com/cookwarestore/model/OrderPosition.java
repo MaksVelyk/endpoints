@@ -11,9 +11,9 @@ public class OrderPosition {
     private Cookware cookware;
     private int quantity;
 
-    public OrderPosition(int id, Cookware tool, int quantity) {
+    public OrderPosition(int id, Cookware cookware, int quantity) {
         this.id = id;
-        this.cookware = tool;
+        this.cookware = cookware;
         this.quantity = quantity;
     }
 

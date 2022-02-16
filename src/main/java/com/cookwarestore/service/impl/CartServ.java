@@ -15,19 +15,19 @@ import java.util.Optional;
 public class CartServ implements ICartServI {
 
     @Autowired
-    ICookwareDAOI toolDAO;
+    ICookwareDAOI cookwareDAO;
 
     @Resource
     SessionObject sessionObject;
 
     public void addCookwareToCart(int cookwareId) {
-        Optional<Cookware> toolBox = this.toolDAO.getCookwareById(cookwareId);
+        Optional<Cookware> cookwareBox = this.cookwareDAO.getCookwareById(cookwareId);
 
-        if(toolBox.isEmpty()) {
+        if(cookwareBox.isEmpty()) {
             return;
         }
 
-        Cookware cookware = toolBox.get();
+        Cookware cookware = cookwareBox.get();
         if(cookware.getQuantity() <= 0) {
             return;
         }

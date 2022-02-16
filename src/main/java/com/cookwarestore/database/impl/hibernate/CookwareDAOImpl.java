@@ -34,9 +34,9 @@ public class CookwareDAOImpl implements ICookwareDAOI {
         Query<Cookware> query = session.createQuery("FROM com.cookwarestore.model.Cookware WHERE id = :id");
         query.setParameter("id", cookwareId);
         try {
-            Cookware book = query.getSingleResult();
+            Cookware cookware = query.getSingleResult();
             session.close();
-            return Optional.of(book);
+            return Optional.of(cookware);
         } catch (NoResultException e) {
             session.close();
             return Optional.empty();

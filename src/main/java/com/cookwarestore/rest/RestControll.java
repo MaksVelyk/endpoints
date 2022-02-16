@@ -30,13 +30,13 @@ public class RestControll {
     public void addUser(@RequestBody User user) {iUserService.addUser(user);}
 
     @RequestMapping(value = "/cookware/{id}", method = RequestMethod.GET)
-    public Cookware getTool(@PathVariable int id) {
+    public Cookware getCookware(@PathVariable int id) {
         Cookware cookware = iCookwareServI.getCookwareById(id);
         return cookware;
     }
 
     @RequestMapping(value = "/cookware/getall", method = RequestMethod.GET)
-    public List<Cookware> getTools() {
+    public List<Cookware> getCookwares() {
         return iCookwareServI.getAllCookwares();
     }
 

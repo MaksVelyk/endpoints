@@ -9,6 +9,7 @@
         <module name="spring-Maksym" />
         <module name="endpoints-Maksym" />
         <module name="ToolStore" />
+        <module name="Maksym_velyk_endpoints" />
         <module name="hibernate-Maksym" />
         <module name="Cookware Store" />
       </profile>
@@ -17,6 +18,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Cookware Store" options="-parameters" />
+      <module name="Maksym_velyk_endpoints" options="-parameters" />
       <module name="ToolStore" options="-parameters" />
       <module name="endpoints-Maksym" options="-parameters" />
       <module name="hibernate-Maksym" options="-parameters" />

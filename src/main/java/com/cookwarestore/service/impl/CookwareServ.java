@@ -21,13 +21,13 @@ public class CookwareServ implements ICookwareServI {
 
     @Override
     public Cookware getCookwareById(int cookwareId) {
-        Optional<Cookware> toolOptional = cookwareDAO.getCookwareById(cookwareId);
+        Optional<Cookware> cookwareOptional = cookwareDAO.getCookwareById(cookwareId);
 
-        if (toolOptional.isEmpty()) {
+        if (cookwareOptional.isEmpty()) {
             return null;
         }
 
-        return toolOptional.get();
+        return cookwareOptional.get();
     }
 
     public void updateCookware(Cookware cookware) {

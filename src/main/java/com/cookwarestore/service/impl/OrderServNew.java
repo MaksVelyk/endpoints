@@ -32,10 +32,10 @@ public class OrderServNew implements IOrderServI {
         Order order = new Order(this.sessionObject.getUser(), new HashSet<>(this.sessionObject.getCart().getOrderPositions()));
         this.orderDAO.addOrder(order);
         for (OrderPosition orderPosition : order.getOrderPositions()) {
-            Optional<Cookware> toolBox = this.cookwareDAO.getCookwareById(orderPosition.getCookware().getId());
-            if(toolBox.isPresent()) {
-                toolBox.get().setQuantity(toolBox.get().getQuantity() - orderPosition.getQuantity());
-                this.cookwareDAO.updateCookware(toolBox.get());
+            Optional<Cookware> cookwareBox = this.cookwareDAO.getCookwareById(orderPosition.getCookware().getId());
+            if(cookwareBox.isPresent()) {
+                cookwareBox.get().setQuantity(cookwareBox.get().getQuantity() - orderPosition.getQuantity());
+                this.cookwareDAO.updateCookware(cookwareBox.get());
             }
         }
         this.sessionObject.getCart().clearOrderPositions();
